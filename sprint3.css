@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Space+Grotesk:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: small;
+}
+
+body{
+    font-weight: 500;
+    min-height: 100vh;
+}
+
+.bg-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.frente-tarjeta, .fondo-tarjeta{
+    width: fit-content;
+}
+
+.fondo-tarjeta{
+    transform: translateX(25%);
+}
+
+.logo-tarjeta{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 100%;
+}
+
+.numero-tarjeta{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 27px;
+}
+
+.nombre-tarjeta{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.fecha{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.tarjeta_cvc{
+    position: absolute;
+    right: 4rem;
+    top: 9rem;
+}
+
+.cvc{
+    width: 50%;
+}
+
+form label{
+    color: #220930;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+form input{
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    opacity: 50%;
+}
+
+#cvc, #año, #mes{
+    margin-right: 10px;
+}
+
+.submit-btn{
+    background-color: #220930;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media all and (max-width: 1040px){
+    .numero-tarjeta{
+        font-size: 24px;
+    }
+}
+
+@media all and (max-width: 415px){
+    .numero-tarjeta{
+        font-size: 14px;
+    }
+    .nombre-tarjeta, .fecha{
+        bottom: 0%;
+    }
+    .cvc{
+        top: 40%;
+    }
+    .tarjeta_cvc{
+        top: 4.5rem;
+        right: 2rem;
+        font-size: 12px;
+    }
+}
